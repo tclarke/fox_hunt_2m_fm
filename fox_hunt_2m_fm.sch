@@ -52,43 +52,12 @@ Wire Wire Line
 	4450 3300 4300 3300
 Wire Wire Line
 	4300 3300 4300 3700
-$Comp
-L Device:R R2
-U 1 1 607D1A99
-P 5450 3400
-F 0 "R2" V 5350 3400 50  0000 C CNN
-F 1 "1k" V 5250 3400 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 5380 3400 50  0001 C CNN
-F 3 "~" H 5450 3400 50  0001 C CNN
-	1    5450 3400
-	0    1    -1   0   
-$EndComp
-$Comp
-L Device:R R1
-U 1 1 607D264D
-P 5450 3200
-F 0 "R1" V 5243 3200 50  0000 C CNN
-F 1 "1k" V 5334 3200 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 5380 3200 50  0001 C CNN
-F 3 "~" H 5450 3200 50  0001 C CNN
-	1    5450 3200
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	5150 3200 5300 3200
+	5150 3200 5250 3200
 Wire Wire Line
 	5150 3400 5300 3400
 Wire Wire Line
-	5150 3300 5600 3300
-Wire Wire Line
-	5600 3300 5600 3200
-Wire Wire Line
-	5600 3300 5600 3400
-Connection ~ 5600 3300
-Wire Wire Line
 	5800 3050 5800 3300
-Wire Wire Line
-	5800 3300 5600 3300
 Wire Wire Line
 	4100 3700 4300 3700
 Connection ~ 4300 3700
@@ -140,11 +109,6 @@ F 3 "~" H 6200 2750 50  0001 C CNN
 	1    6200 2750
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5600 3200 5600 2750
-Wire Wire Line
-	5600 2750 6050 2750
-Connection ~ 5600 3200
 Text Notes 6300 2700 0    50   ~ 0
 50 Ω nominal impedance
 Text Notes 5600 2750 0    50   ~ 0
@@ -289,11 +253,7 @@ $EndComp
 Wire Wire Line
 	7250 3650 7250 3600
 Wire Wire Line
-	7250 3600 7550 3600
-Wire Wire Line
-	7550 3600 7550 3700
-Wire Wire Line
-	7550 3700 7950 3700
+	7250 3600 7650 3600
 Wire Wire Line
 	7950 3800 7900 3800
 Wire Wire Line
@@ -520,4 +480,55 @@ F 3 "~" H 5650 4750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7650 4950 8050 4950
+Wire Wire Line
+	5150 3300 5600 3300
+$Comp
+L Device:L L2
+U 1 1 60B15913
+P 5450 3200
+F 0 "L2" V 5269 3200 50  0000 C CNN
+F 1 "330nH" V 5360 3200 50  0000 C CNN
+F 2 "Inductor_SMD:L_1008_2520Metric" H 5450 3200 50  0001 C CNN
+F 3 "~" H 5450 3200 50  0001 C CNN
+	1    5450 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L L3
+U 1 1 60B161F4
+P 5450 3400
+F 0 "L3" V 5550 3400 50  0000 C CNN
+F 1 "330nH" V 5650 3400 50  0000 C CNN
+F 2 "Inductor_SMD:L_1008_2520Metric" H 5450 3400 50  0001 C CNN
+F 3 "~" H 5450 3400 50  0001 C CNN
+	1    5450 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5600 3200 5600 3300
+Connection ~ 5600 3300
+Wire Wire Line
+	5600 3300 5800 3300
+Wire Wire Line
+	5600 3400 5600 3300
+Wire Wire Line
+	5250 2750 5250 3200
+Wire Wire Line
+	5250 2750 6050 2750
+Connection ~ 5250 3200
+Wire Wire Line
+	5250 3200 5300 3200
+$Comp
+L Device:D D1
+U 1 1 60B2CDBE
+P 7800 3700
+F 0 "D1" H 7800 3483 50  0000 C CNN
+F 1 "D" H 7800 3574 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7800 3700 50  0001 C CNN
+F 3 "~" H 7800 3700 50  0001 C CNN
+	1    7800 3700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7650 3600 7650 3700
 $EndSCHEMATC
