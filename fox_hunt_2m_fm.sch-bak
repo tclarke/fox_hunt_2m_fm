@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L vw:MAX260x U1
+L fox_hunt_2m_fm-rescue:MAX260x-vw U1
 U 1 1 607CF170
 P 4800 3300
 F 0 "U1" H 4800 3625 50  0000 C CNN
@@ -66,38 +66,38 @@ Wire Wire Line
 $Comp
 L Device:C C2
 U 1 1 607D4142
-P 5300 4750
-F 0 "C2" H 5415 4796 50  0000 L CNN
-F 1 "0.1uF" H 5350 4700 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5338 4600 50  0001 C CNN
-F 3 "~" H 5300 4750 50  0001 C CNN
-	1    5300 4750
+P 7650 5150
+F 0 "C2" H 7765 5196 50  0000 L CNN
+F 1 "0.1uF" H 7700 5100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 7688 5000 50  0001 C CNN
+F 3 "~" H 7650 5150 50  0001 C CNN
+	1    7650 5150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5650 4550 5650 4600
+	8000 4950 8000 5000
 Wire Wire Line
-	5300 4600 5300 4550
+	7650 5000 7650 4950
 Wire Wire Line
-	5300 4550 5650 4550
+	7650 4950 8000 4950
 $Comp
 L power:GND #PWR0103
 U 1 1 607D4C59
-P 5500 5050
-F 0 "#PWR0103" H 5500 4800 50  0001 C CNN
-F 1 "GND" H 5505 4877 50  0000 C CNN
-F 2 "" H 5500 5050 50  0001 C CNN
-F 3 "" H 5500 5050 50  0001 C CNN
-	1    5500 5050
+P 7850 5450
+F 0 "#PWR0103" H 7850 5200 50  0001 C CNN
+F 1 "GND" H 7855 5277 50  0000 C CNN
+F 2 "" H 7850 5450 50  0001 C CNN
+F 3 "" H 7850 5450 50  0001 C CNN
+	1    7850 5450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5300 4900 5500 4900
+	7650 5300 7850 5300
 Wire Wire Line
-	5500 5050 5500 4900
-Connection ~ 5500 4900
+	7850 5450 7850 5300
+Connection ~ 7850 5300
 Wire Wire Line
-	5500 4900 5650 4900
+	7850 5300 8000 5300
 $Comp
 L Device:C C3
 U 1 1 607D582E
@@ -114,7 +114,7 @@ Text Notes 6300 2700 0    50   ~ 0
 Text Notes 5600 2750 0    50   ~ 0
 -10dBm
 $Comp
-L vw:SMA3107 U2
+L fox_hunt_2m_fm-rescue:SMA3107-vw U2
 U 1 1 607D77B1
 P 7600 2750
 F 0 "U2" H 8044 2796 50  0000 L CNN
@@ -211,7 +211,7 @@ Wire Wire Line
 Connection ~ 4450 3500
 Text GLabel 4250 4400 0    50   Input ~ 0
 TUNE
-Text Notes 3950 4550 0    50   ~ 0
+Text Notes 5950 5250 0    50   ~ 0
 ATtiny212 external board
 Text Notes 8750 2650 0    50   ~ 0
 Approx 16dBm
@@ -274,31 +274,6 @@ F 3 "~" H 6550 4850 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR01
-U 1 1 607F8484
-P 6050 4500
-F 0 "#PWR01" H 6050 4350 50  0001 C CNN
-F 1 "VCC" H 6065 4673 50  0000 C CNN
-F 2 "" H 6050 4500 50  0001 C CNN
-F 3 "" H 6050 4500 50  0001 C CNN
-	1    6050 4500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 4500 6050 4550
-Wire Wire Line
-	6050 4850 6200 4850
-Wire Wire Line
-	6200 4750 6050 4750
-Connection ~ 6050 4750
-Wire Wire Line
-	6050 4750 6050 4850
-Wire Wire Line
-	6200 4650 6050 4650
-Connection ~ 6050 4650
-Wire Wire Line
-	6050 4650 6050 4750
-$Comp
 L power:GND #PWR02
 U 1 1 607FA951
 P 7150 5100
@@ -332,55 +307,18 @@ NoConn ~ 6200 5150
 NoConn ~ 6750 5050
 NoConn ~ 6750 5150
 $Comp
-L Transistor_FET:BSS138 Q1
-U 1 1 608046BE
-P 8250 4950
-F 0 "Q1" H 8454 4996 50  0000 L CNN
-F 1 "BSS138K" H 8454 4905 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 8450 4875 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/BSS138-D.PDF" H 8250 4950 50  0001 L CNN
-	1    8250 4950
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3V3 #PWR05
 U 1 1 6080B91D
-P 8650 4600
-F 0 "#PWR05" H 8650 4450 50  0001 C CNN
-F 1 "+3V3" H 8665 4773 50  0000 C CNN
-F 2 "" H 8650 4600 50  0001 C CNN
-F 3 "" H 8650 4600 50  0001 C CNN
-	1    8650 4600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 6080D77A
-P 8350 4550
-F 0 "R4" H 8420 4596 50  0000 L CNN
-F 1 "15" H 8420 4505 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 8280 4550 50  0001 C CNN
-F 3 "~" H 8350 4550 50  0001 C CNN
-	1    8350 4550
+P 7650 4850
+F 0 "#PWR05" H 7650 4700 50  0001 C CNN
+F 1 "+3V3" H 7665 5023 50  0000 C CNN
+F 2 "" H 7650 4850 50  0001 C CNN
+F 3 "" H 7650 4850 50  0001 C CNN
+	1    7650 4850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8350 4700 8650 4700
-Wire Wire Line
-	8650 4700 8650 4600
-$Comp
-L power:VCC #PWR03
-U 1 1 608129D5
-P 8350 4300
-F 0 "#PWR03" H 8350 4150 50  0001 C CNN
-F 1 "VCC" H 8365 4473 50  0000 C CNN
-F 2 "" H 8350 4300 50  0001 C CNN
-F 3 "" H 8350 4300 50  0001 C CNN
-	1    8350 4300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8350 4300 8350 4400
+	7650 4950 7650 4850
 $Comp
 L Device:R R3
 U 1 1 60813DF3
@@ -394,22 +332,6 @@ F 3 "~" H 7500 4950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6750 4950 7350 4950
-Wire Wire Line
-	8350 4750 8350 4700
-Connection ~ 8350 4700
-$Comp
-L power:GND #PWR04
-U 1 1 6081A9EA
-P 8350 5350
-F 0 "#PWR04" H 8350 5100 50  0001 C CNN
-F 1 "GND" H 8355 5177 50  0000 C CNN
-F 2 "" H 8350 5350 50  0001 C CNN
-F 3 "" H 8350 5350 50  0001 C CNN
-	1    8350 5350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8350 5150 8350 5350
 $Comp
 L power:+3V3 #PWR0102
 U 1 1 6081C9DD
@@ -433,12 +355,6 @@ F 3 "" H 7500 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 7500 2000
-Wire Wire Line
-	6050 4550 5650 4550
-Connection ~ 6050 4550
-Wire Wire Line
-	6050 4550 6050 4650
-Connection ~ 5650 4550
 $Comp
 L Connector_Generic:Conn_01x02 J4
 U 1 1 60821534
@@ -467,19 +383,6 @@ Wire Wire Line
 	8900 3000 8900 2850
 Wire Wire Line
 	8900 2850 8950 2850
-$Comp
-L Device:C C4
-U 1 1 6082A2D3
-P 5650 4750
-F 0 "C4" H 5765 4796 50  0000 L CNN
-F 1 "1uF" H 5700 4700 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5688 4600 50  0001 C CNN
-F 3 "~" H 5650 4750 50  0001 C CNN
-	1    5650 4750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7650 4950 8050 4950
 Wire Wire Line
 	5150 3300 5600 3300
 $Comp
@@ -524,11 +427,47 @@ U 1 1 60B2CDBE
 P 7800 3700
 F 0 "D1" H 7800 3483 50  0000 C CNN
 F 1 "D" H 7800 3574 50  0000 C CNN
-F 2 "" H 7800 3700 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 7800 3700 50  0001 C CNN
 F 3 "~" H 7800 3700 50  0001 C CNN
 	1    7800 3700
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	7650 3600 7650 3700
+Connection ~ 7650 4950
+$Comp
+L Device:C C4
+U 1 1 6082A2D3
+P 8000 5150
+F 0 "C4" H 8115 5196 50  0000 L CNN
+F 1 "1uF" H 8050 5100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 8038 5000 50  0001 C CNN
+F 3 "~" H 8000 5150 50  0001 C CNN
+	1    8000 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 60DDFC83
+P 8350 5150
+F 0 "C7" H 8465 5196 50  0000 L CNN
+F 1 "470pF" H 8400 5100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8388 5000 50  0001 C CNN
+F 3 "~" H 8350 5150 50  0001 C CNN
+	1    8350 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5300 8350 5300
+Connection ~ 8000 5300
+Wire Wire Line
+	8000 4950 8350 4950
+Wire Wire Line
+	8350 4950 8350 5000
+Connection ~ 8000 4950
+Text Notes 7300 4200 0    50   ~ 0
+Decoupling and\nregulation is on\nthe digital board
+NoConn ~ 6200 4850
+NoConn ~ 6200 4750
+NoConn ~ 6200 4650
 $EndSCHEMATC

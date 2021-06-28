@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name fox_hunt_2m_fm-rescue)(type Legacy)(uri ${KIPRJMOD}/fox_hunt_2m_fm-rescue.lib)(options "")(descr ""))
+  (lib (name local_symbols)(type Legacy)(uri ${KIPRJMOD}/local_symbols.lib)(options "")(descr ""))
+)
